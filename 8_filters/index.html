@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+	<meta charset="utf-8">
+	<title>Prácticas angularJS</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+</head>
+<body ng-controller="FiltersController">
+	<p>{{myHtml}}</p>
+	<p>{{myHtml | removeHtml}}</p>
+	<p>{{myJson | json}}</p>
+	<p>{{costo | currency}}</p>
+	<p>{{costo | currency: '@'}}</p>
+</body>
+</html>
