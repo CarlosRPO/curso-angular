@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/autocomplete-jquery-ui.structure.css">
+	<title>Prácticas angularJS</title>
+	<script type="text/javascript" src="./js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./js/angular/angular-route.min.js"></script>
+	<script type="text/javascript" src="./js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./js/jquery/autocomplete-jquery-ui.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+	<script type="text/javascript" src="./js/directives.js"></script>
+	<script type="text/javascript" src="./js/controllers.js"></script>
+	<style>
+		.circular {
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+		}
+		.no-list li {
+			list-style-type: none;
+		}
+		body, html {
+			text-align: center;
+			background-color: #eee;
+			margin: 0px;
+		}
+		input {
+			width: 100%;
+			max-width: 800px;
+			height: 30px;
+		}
+		.ui-autocomplete {
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+	<div ng-view></div>
+</body>
+</html>

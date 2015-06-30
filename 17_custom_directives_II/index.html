@@ -2,7 +2,12 @@
 <html ng-app="CustomDirective">
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="autocomplete-jquery-ui.structure.css">
 	<title>Prácticas angularJS</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="autocomplete-jquery-ui.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
 	<style>
 		.circular {
 			border-radius: 50%;
@@ -18,21 +23,24 @@
 			background-color: #eee;
 			margin: 0px;
 		}
+		input {
+			width: 100%;
+			max-width: 800px;
+			height: 30px;
+		}
+		.ui-autocomplete {
+			background-color: white;
+		}
 	</style>
-	<link rel="stylesheet" href="autocomplete-jquery-ui.structure.css">
-	<script type="text/javascript" src="angular.min.js"></script>
-	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="autocomplete-jquery-ui.js"></script>
-	<script type="text/javascript" src="controller.js"></script>
 </head>
 <body ng-controller="AppCtrl">
 	<input type="text" my-autocomplete="repos" placeholder="Buscar repositorio">
 	<ul class="no-list">
-		<li ng-repeat="repo in repos" ng-hide="main_repo && main_repo != repo.name">
+		<li ng-repeat="repo in posts" ng-hide="main_repo && main_repo != repo.name">
 			<div class="circular" back-img="{{repo.owner.avatar_url}}"></div>
 			<h1 class="inline-block">{{repo.full_name}}</h1>
 		</li>
 	</ul>
-	<a ng-click="main_repo = null">Limpiar</a>
+	<a href="javascript:" ng-click="main_repo = null">Limpiar</a>
 </body>
 </html>
